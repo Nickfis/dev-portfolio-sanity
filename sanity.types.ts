@@ -74,6 +74,19 @@ export type Slug = {
   source?: string
 }
 
+export type Skills = {
+  _id: string
+  _type: 'skills'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  skillsList?: Array<{
+    name?: string
+    iconClass?: string
+    _key: string
+  }>
+}
+
 export type Project = {
   _id: string
   _type: 'project'
@@ -206,6 +219,7 @@ export type AllSanitySchemaTypes =
   | SanityFileAsset
   | Geopoint
   | Slug
+  | Skills
   | Project
   | SanityImageCrop
   | SanityImageHotspot
